@@ -1,14 +1,534 @@
 {
     "name": {
-        "ar": "\u0623\u0642\u0633\u0627\u0645 \u062a\u0635\u0646\u064a\u0641\u0627\u062a \u0645\u0632\u064a\u062c",
+        "ar": "أقسام تصنيفات مزيج",
         "en": "tw-categories-mazeej"
     },
     "description": {
-        "ar": "",
-        "en": ""
+        "ar": "ثلاثة أنماط لعرض تصنيفات المتجر مع تحكم كامل في الألوان والخطوط والتخطيط",
+        "en": "Three category display patterns with full control over colors, fonts, and layout"
     },
     "author_email": "moh.tarek.dev@gmail.com",
     "support_url": "",
     "repository": "https://github.com/MohamedTarek1993/tw-categories-mazeej",
-    "components": []
+    "components": [
+        {
+            "title": "تصنيفات دوائر",
+            "icon": "sicon-circle",
+            "name": "categories-circle",
+            "key": "cat-circle-mazeej-001",
+            "image": "https://cdn.salla.network/images/themes/default/placeholder.jpg",
+            "fields": [
+                {
+                    "id": "categories",
+                    "icon": "sicon-layout-grid",
+                    "type": "categories",
+                    "label": "التصنيفات",
+                    "required": true
+                },
+                {
+                    "id": "header_title",
+                    "icon": "sicon-format-text-alt",
+                    "type": "string",
+                    "label": "عنوان القسم",
+                    "format": "text",
+                    "required": false,
+                    "placeholder": "أدخل عنوان القسم...",
+                    "value": ""
+                },
+                {
+                    "id": "header_text",
+                    "icon": "sicon-paragraph",
+                    "type": "string",
+                    "label": "نص القسم",
+                    "format": "text",
+                    "required": false,
+                    "placeholder": "أدخل نص توضيحي...",
+                    "value": ""
+                },
+                {
+                    "id": "header_title_position",
+                    "icon": "sicon-align-center",
+                    "type": "string",
+                    "label": "محاذاة العنوان",
+                    "format": "select",
+                    "required": false,
+                    "value": "start",
+                    "options": [
+                        { "value": "start", "label": "يمين" },
+                        { "value": "center", "label": "وسط" },
+                        { "value": "end", "label": "يسار" }
+                    ]
+                },
+                {
+                    "id": "header_title_color",
+                    "icon": "sicon-dropper",
+                    "type": "string",
+                    "label": "لون العنوان",
+                    "format": "color",
+                    "required": false,
+                    "value": "#000000"
+                },
+                {
+                    "id": "header_title_font_size",
+                    "icon": "sicon-format-text-alt",
+                    "type": "string",
+                    "label": "حجم خط العنوان",
+                    "format": "text",
+                    "required": false,
+                    "placeholder": "1.75rem",
+                    "value": "1.75rem"
+                },
+                {
+                    "id": "section_bg_color",
+                    "icon": "sicon-dropper",
+                    "type": "string",
+                    "label": "لون خلفية القسم",
+                    "format": "color",
+                    "required": false,
+                    "value": "#ffffff"
+                },
+                {
+                    "id": "image_size",
+                    "icon": "sicon-image",
+                    "type": "string",
+                    "label": "حجم الصورة الدائرية",
+                    "format": "text",
+                    "required": false,
+                    "placeholder": "120px",
+                    "value": "120px"
+                },
+                {
+                    "id": "border_hover_color",
+                    "icon": "sicon-dropper",
+                    "type": "string",
+                    "label": "لون الإطار عند التحويم",
+                    "format": "color",
+                    "required": false,
+                    "value": "#c49a7a"
+                },
+                {
+                    "id": "category_name_color",
+                    "icon": "sicon-dropper",
+                    "type": "string",
+                    "label": "لون اسم التصنيف",
+                    "format": "color",
+                    "required": false,
+                    "value": "#1f2937"
+                },
+                {
+                    "id": "category_name_hover_color",
+                    "icon": "sicon-dropper",
+                    "type": "string",
+                    "label": "لون اسم التصنيف عند التحويم",
+                    "format": "color",
+                    "required": false,
+                    "value": "#c49a7a"
+                },
+                {
+                    "id": "category_name_font_size",
+                    "icon": "sicon-format-text-alt",
+                    "type": "string",
+                    "label": "حجم خط اسم التصنيف",
+                    "format": "text",
+                    "required": false,
+                    "placeholder": "0.875rem",
+                    "value": "0.875rem"
+                },
+                {
+                    "id": "cols_laptop",
+                    "icon": "sicon-monitor",
+                    "type": "number",
+                    "label": "عدد الأعمدة — لاب توب",
+                    "required": false,
+                    "value": 7,
+                    "min": 1,
+                    "max": 12
+                },
+                {
+                    "id": "cols_tablet",
+                    "icon": "sicon-tablet",
+                    "type": "number",
+                    "label": "عدد الأعمدة — تابلت",
+                    "required": false,
+                    "value": 4,
+                    "min": 1,
+                    "max": 8
+                },
+                {
+                    "id": "cols_mobile",
+                    "icon": "sicon-mobile",
+                    "type": "number",
+                    "label": "عدد الأعمدة — موبايل",
+                    "required": false,
+                    "value": 2,
+                    "min": 1,
+                    "max": 4
+                },
+                {
+                    "id": "display_button",
+                    "icon": "sicon-link",
+                    "type": "boolean",
+                    "label": "إظهار زرار عرض الكل",
+                    "required": false,
+                    "value": false
+                },
+                {
+                    "id": "button_text",
+                    "icon": "sicon-format-text-alt",
+                    "type": "string",
+                    "label": "نص الزرار",
+                    "format": "text",
+                    "required": false,
+                    "placeholder": "عرض الكل",
+                    "value": "عرض الكل"
+                },
+                {
+                    "id": "button_link",
+                    "icon": "sicon-link",
+                    "type": "string",
+                    "label": "رابط الزرار",
+                    "format": "url",
+                    "required": false,
+                    "value": ""
+                }
+            ]
+        },
+        {
+            "title": "تصنيفات كروت هوفر",
+            "icon": "sicon-layout-grid-2",
+            "name": "categories-hover",
+            "key": "cat-hover-mazeej-002",
+            "image": "https://cdn.salla.network/images/themes/default/placeholder.jpg",
+            "fields": [
+                {
+                    "id": "categories",
+                    "icon": "sicon-layout-grid",
+                    "type": "categories",
+                    "label": "التصنيفات",
+                    "required": true
+                },
+                {
+                    "id": "header_title",
+                    "icon": "sicon-format-text-alt",
+                    "type": "string",
+                    "label": "عنوان القسم",
+                    "format": "text",
+                    "required": false,
+                    "placeholder": "أدخل عنوان القسم...",
+                    "value": ""
+                },
+                {
+                    "id": "header_text",
+                    "icon": "sicon-paragraph",
+                    "type": "string",
+                    "label": "نص القسم",
+                    "format": "text",
+                    "required": false,
+                    "value": ""
+                },
+                {
+                    "id": "header_title_position",
+                    "icon": "sicon-align-center",
+                    "type": "string",
+                    "label": "محاذاة العنوان",
+                    "format": "select",
+                    "required": false,
+                    "value": "start",
+                    "options": [
+                        { "value": "start", "label": "يمين" },
+                        { "value": "center", "label": "وسط" },
+                        { "value": "end", "label": "يسار" }
+                    ]
+                },
+                {
+                    "id": "header_title_color",
+                    "icon": "sicon-dropper",
+                    "type": "string",
+                    "label": "لون العنوان",
+                    "format": "color",
+                    "required": false,
+                    "value": "#000000"
+                },
+                {
+                    "id": "header_title_font_size",
+                    "icon": "sicon-format-text-alt",
+                    "type": "string",
+                    "label": "حجم خط العنوان",
+                    "format": "text",
+                    "required": false,
+                    "placeholder": "1.75rem",
+                    "value": "1.75rem"
+                },
+                {
+                    "id": "section_bg_color",
+                    "icon": "sicon-dropper",
+                    "type": "string",
+                    "label": "لون خلفية القسم",
+                    "format": "color",
+                    "required": false,
+                    "value": "#ffffff"
+                },
+                {
+                    "id": "overlay_color",
+                    "icon": "sicon-dropper",
+                    "type": "string",
+                    "label": "لون طبقة الهوفر",
+                    "format": "color",
+                    "required": false,
+                    "value": "#000000"
+                },
+                {
+                    "id": "overlay_opacity",
+                    "icon": "sicon-eye",
+                    "type": "number",
+                    "label": "شفافية طبقة الهوفر (0 إلى 1)",
+                    "required": false,
+                    "value": 0.55,
+                    "min": 0,
+                    "max": 1,
+                    "step": 0.05
+                },
+                {
+                    "id": "category_name_color",
+                    "icon": "sicon-dropper",
+                    "type": "string",
+                    "label": "لون اسم التصنيف",
+                    "format": "color",
+                    "required": false,
+                    "value": "#ffffff"
+                },
+                {
+                    "id": "category_name_font_size",
+                    "icon": "sicon-format-text-alt",
+                    "type": "string",
+                    "label": "حجم خط اسم التصنيف",
+                    "format": "text",
+                    "required": false,
+                    "placeholder": "0.9rem",
+                    "value": "0.9rem"
+                },
+                {
+                    "id": "card_border_radius",
+                    "icon": "sicon-corner-radius",
+                    "type": "string",
+                    "label": "انحناء حواف الكارت",
+                    "format": "text",
+                    "required": false,
+                    "placeholder": "12px",
+                    "value": "12px"
+                },
+                {
+                    "id": "cols_laptop",
+                    "icon": "sicon-monitor",
+                    "type": "number",
+                    "label": "عدد الأعمدة — لاب توب",
+                    "required": false,
+                    "value": 5,
+                    "min": 1,
+                    "max": 8
+                },
+                {
+                    "id": "cols_tablet",
+                    "icon": "sicon-tablet",
+                    "type": "number",
+                    "label": "عدد الأعمدة — تابلت",
+                    "required": false,
+                    "value": 3,
+                    "min": 1,
+                    "max": 6
+                },
+                {
+                    "id": "cols_mobile",
+                    "icon": "sicon-mobile",
+                    "type": "number",
+                    "label": "عدد الأعمدة — موبايل",
+                    "required": false,
+                    "value": 2,
+                    "min": 1,
+                    "max": 4
+                },
+                {
+                    "id": "display_button",
+                    "icon": "sicon-link",
+                    "type": "boolean",
+                    "label": "إظهار زرار عرض الكل",
+                    "required": false,
+                    "value": false
+                },
+                {
+                    "id": "button_text",
+                    "icon": "sicon-format-text-alt",
+                    "type": "string",
+                    "label": "نص الزرار",
+                    "format": "text",
+                    "required": false,
+                    "placeholder": "عرض الكل",
+                    "value": "عرض الكل"
+                },
+                {
+                    "id": "button_link",
+                    "icon": "sicon-link",
+                    "type": "string",
+                    "label": "رابط الزرار",
+                    "format": "url",
+                    "required": false,
+                    "value": ""
+                }
+            ]
+        },
+        {
+            "title": "تصنيفات جريد مع بانر",
+            "icon": "sicon-layout",
+            "name": "categories-grid",
+            "key": "cat-grid-mazeej-003",
+            "image": "https://cdn.salla.network/images/themes/default/placeholder.jpg",
+            "fields": [
+                {
+                    "id": "categories",
+                    "icon": "sicon-layout-grid",
+                    "type": "categories",
+                    "label": "التصنيفات (حتى 4)",
+                    "required": true
+                },
+                {
+                    "id": "show_banner",
+                    "icon": "sicon-image",
+                    "type": "boolean",
+                    "label": "إظهار البانر الجانبي",
+                    "required": false,
+                    "value": false
+                },
+                {
+                    "id": "banner_image",
+                    "icon": "sicon-image",
+                    "type": "string",
+                    "label": "رابط صورة البانر",
+                    "format": "url",
+                    "required": false,
+                    "placeholder": "https://...",
+                    "value": ""
+                },
+                {
+                    "id": "banner_title",
+                    "icon": "sicon-format-text-alt",
+                    "type": "string",
+                    "label": "عنوان البانر",
+                    "format": "text",
+                    "required": false,
+                    "value": ""
+                },
+                {
+                    "id": "banner_text",
+                    "icon": "sicon-paragraph",
+                    "type": "string",
+                    "label": "نص البانر",
+                    "format": "text",
+                    "required": false,
+                    "value": ""
+                },
+                {
+                    "id": "banner_btn_text",
+                    "icon": "sicon-format-text-alt",
+                    "type": "string",
+                    "label": "نص زرار البانر",
+                    "format": "text",
+                    "required": false,
+                    "value": ""
+                },
+                {
+                    "id": "banner_btn_url",
+                    "icon": "sicon-link",
+                    "type": "string",
+                    "label": "رابط زرار البانر",
+                    "format": "url",
+                    "required": false,
+                    "value": ""
+                },
+                {
+                    "id": "banner_title_color",
+                    "icon": "sicon-dropper",
+                    "type": "string",
+                    "label": "لون عنوان البانر",
+                    "format": "color",
+                    "required": false,
+                    "value": "#ffffff"
+                },
+                {
+                    "id": "banner_text_color",
+                    "icon": "sicon-dropper",
+                    "type": "string",
+                    "label": "لون نص البانر",
+                    "format": "color",
+                    "required": false,
+                    "value": "#ffffff"
+                },
+                {
+                    "id": "section_height",
+                    "icon": "sicon-image",
+                    "type": "string",
+                    "label": "ارتفاع القسم",
+                    "format": "text",
+                    "required": false,
+                    "placeholder": "480px",
+                    "value": "480px"
+                },
+                {
+                    "id": "gallery_gap",
+                    "icon": "sicon-spacing",
+                    "type": "string",
+                    "label": "المسافة بين الصور",
+                    "format": "text",
+                    "required": false,
+                    "placeholder": "4px",
+                    "value": "4px"
+                },
+                {
+                    "id": "title_box_bg_color",
+                    "icon": "sicon-dropper",
+                    "type": "string",
+                    "label": "لون خلفية بطاقة الاسم",
+                    "format": "color",
+                    "required": false,
+                    "value": "#ffffff"
+                },
+                {
+                    "id": "title_box_text_color",
+                    "icon": "sicon-dropper",
+                    "type": "string",
+                    "label": "لون نص بطاقة الاسم",
+                    "format": "color",
+                    "required": false,
+                    "value": "#0b192c"
+                },
+                {
+                    "id": "title_box_font_size",
+                    "icon": "sicon-format-text-alt",
+                    "type": "string",
+                    "label": "حجم خط اسم التصنيف",
+                    "format": "text",
+                    "required": false,
+                    "placeholder": "1rem",
+                    "value": "1rem"
+                },
+                {
+                    "id": "banner_btn_bg_color",
+                    "icon": "sicon-dropper",
+                    "type": "string",
+                    "label": "لون زرار البانر عند التحويم",
+                    "format": "color",
+                    "required": false,
+                    "value": "#ffffff"
+                },
+                {
+                    "id": "section_bg_color",
+                    "icon": "sicon-dropper",
+                    "type": "string",
+                    "label": "لون خلفية القسم",
+                    "format": "color",
+                    "required": false,
+                    "value": "#ffffff"
+                }
+            ]
+        }
+    ]
 }
