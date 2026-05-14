@@ -1,12 +1,6 @@
 {
-    "name": {
-        "ar": "أقسام تصنيفات مزيج",
-        "en": "tw-categories-mazeej"
-    },
-    "description": {
-        "ar": "ثلاثة أنماط لعرض تصنيفات المتجر مع تحكم كامل في الألوان والخطوط والتخطيط",
-        "en": "Three category display patterns with full control over colors, fonts, and layout"
-    },
+    "name": "tw-categories-mazeej",
+    "description": "Three category sections (circles, hover cards, banner+grid) with colors, typography, and layout controls.",
     "author_email": "moh.tarek.dev@gmail.com",
     "support_url": "",
     "repository": "https://github.com/MohamedTarek1993/tw-categories-mazeej",
